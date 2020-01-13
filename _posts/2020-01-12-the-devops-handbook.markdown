@@ -29,9 +29,9 @@ However, I seldom remember being asked the
 question "How do you know you what you've built is good?"
 
 Such a question could be interpreted as an accusation in
-some settings, with ones rapport being questioned. In other settings it might be 
-simply answered with slides and graphs depicting the product's performance over 
-previous iterations or implementations. However another interpretation would 
+some settings, with ones rapport being challenged. In other settings it might be
+simply answered with slides and graphs depicting the product's performance over
+previous iterations or implementations. However another interpretation would
 consider how _trustworthy_ the product is, an incredibly important
 attribute that I now believe is _wildly_ underrated.
 
@@ -68,13 +68,13 @@ Some environments see an investment in to automated testing as a _nice to have_
 almost as if it were a feature to be implemented in the next major release. However,
 this perspective trivializes the costs associated with last minute refactoring,
 emergency hot fixes, and most importantly - brand degradation. A deficit of
-automated testing leads to product accruing a compounding mountain of technical
+automated testing leads to the product accruing a compounding mountain of technical
 debt resulting in a codebase so fragile and mystifying that even senior engineers
 might wonder how the product even worked in the first place. Spooky. (2)
 
 So, enough with the war stories, let's pretend we've got automated testing!
 Depending on the VSC flow the team is using, "quality gates" can be constructed
-that give the team (and all other downstream consumers) _*faith*_ that the product
+that give the team (and all other downstream consumers) **faith** that the product
 will do everything it claims to do. (3) These gates can be arranged such that the
 intensity and scope increase with each level as described below:
 
@@ -87,7 +87,7 @@ intensity and scope increase with each level as described below:
 | 5 | performance tests - similar to end-to-end but with larger data sets| minutes to hours|
 | 6 | manual testing - human + checklist driven| minutes (4)|
 
-The above gates are just a guideline, make it makes sense to mix and match for a given product due to the domain, team, technologies, etc.
+The above gates are just a guideline, it may make sense to mix and match for a given product due to the domain, team, technologies, etc.
 
 ### Production Telemetry
 
@@ -103,6 +103,15 @@ arguably impossible to determine if a given change will improve or disrupt a cus
 workflow within the product. Therefore, instrumenting the product will give the 
 development team visibility in to how the product is being used, and will objectively 
 assert whether or not value is being provided. (5)
+
+Some examples of frameworks that facilitate telemetry include:
+
+- [OpenMetrics](https://openmetrics.io/)
+- [OpenTracing](https://opentracing.io/)
+- [ELK](https://www.elastic.co/what-is/elk-stack)
+- [Application Insights on Azure](https://docs.microsoft.com/en-us/azure/azure-monitor/app/usage-flows)
+- [Google Analytics](https://developers.google.com/analytics)
+- so many many more!
 
 Footnotes:
 
