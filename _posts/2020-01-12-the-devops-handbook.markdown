@@ -52,8 +52,6 @@ value streams to produce meaningful quality metrics and gives teams
 a compass to determine if their development process is safe. These
 tests would largely depend on the domain and architecture of the 
 product in question, but if done correctly they decrease risk when
-releasing the product, facilitate higher functioning workflows, and
-give external (and internal) customers *faith* that the product will
-work as intended.
-
-
+releasing the product, facilitate higher functioning workflows 
+(measured by lead time), and give external (and internal) customers
+*faith* that the product will work as intended when it is delivered.
