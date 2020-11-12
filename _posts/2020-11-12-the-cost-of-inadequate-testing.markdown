@@ -2,7 +2,7 @@
 layout: post
 title: Opinion - The Cost of Inadequate Testing
 date: 2020-11-12
-categories: books development opinion
+categories: opinion development
 ---
 
 WIP Disclaimer - All content is subject to change!
