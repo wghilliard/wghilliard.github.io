@@ -11,7 +11,7 @@ WIP Disclaimer - All content is subject to change!
 
 I've decided to break down my initial attempt at discussing this topic of *The Cost of Inadequate Testing* in to a miniseries of articles - welcome to Part One.
 
-## Miniseries - Part One - The (Formulated) Cost of Inadequate Testing
+---
 
 Often I find that the value of testing is difficult to measure, however the cost of inadequate testing is quantifiable.
 
