@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Opinion - Testing Miniseries - Park One - The (Formulated) Cost of Inadequate Testing
+title: Opinion - Testing Miniseries - Part One - The (Formulated) Cost of Inadequate Testing
 date: 2020-11-21
 categories: opinion development
 ---
@@ -9,7 +9,7 @@ WIP Disclaimer - All content is subject to change!
 
 ---
 
-I've decided to break down my initial attempt at discussing this topic of *The Cost of Inadequate Testing* in to a Miniseries - welcome to Part One.
+I've decided to break down my initial attempt at discussing this topic of *The Cost of Inadequate Testing* in to a miniseries of articles - welcome to Part One.
 
 ## Miniseries - Part One - The (Formulated) Cost of Inadequate Testing
 
