@@ -9,7 +9,7 @@ WIP Disclaimer - All content is subject to change!
 
 ---
 
-I've decided to break down my initial attempt at discussing this topic of *The Cost of Inadequate Testing* in to a miniseries of articles - welcome to Part One.
+I've decided to break down my initial attempt at discussing this topic of _The Cost of Inadequate Testing_ in to a miniseries of articles - welcome to Part One.
 
 ---
 
@@ -25,21 +25,19 @@ In this article I shall attempt to formulate the perceived cost to develop a **P
 
 For this thought experiment, we'll express costs in the units of "developer hours", the trendier version of a "man hour".
 
-When we build a **Product**, we can think of it as a composition of an environment (**Infrastructure**), some business logic (**Features**), and undetected bugs (**Defects**).
+When we build a **Product**, we can think of it as a composition of an environment (**Infrastructure**), some business logic (**Features**), and undetected bugs + refactoring (**Maintenance**).
 
-> Product = Infrastructure + Features + Defects
+> Product = Infrastructure + Features + Maintenance
 
-Caveat - **Infrastructure** is a topic for another day, for this exercise we can pretend that if the code builds in the Continuous Integration pipeline, then it performs (as authored) in the production environment.
+Caveat: **Infrastructure** is a topic for another day, for this exercise we can pretend that if the code builds in the Continuous Integration pipeline, then it performs (as authored) in the production environment.
 
-Therefore, let's zoom in on the **Features**. Each **Feature** needs to be described, designed, built, and updated as the product evolves. Easy enough!
+**Maintenance** encapsulates both updating the business logic as the **Product** (and our understanding of the business value) evolves, along with addressing defects as they are found. Let's decompose **Maintenance** in to **Defects** and **Business Logic Refactoring**, where we treat **Business Logic Refactoring** as a constant cost and therefore omit it from the the latter formulas to reduce complexity. (If you believe this to be hersey, feel free to email me and tell me why you think I'm wrong!)
 
-> Feature = Design + Implementation + Maintenance
+Next, let's zoom in on the **Features** Term. Each **Feature** needs to be described, designed, built, and updated as the product evolves. Easy enough!
 
-Each of the above terms could be expanded further, but let's unpack the **Implementation** and **Maintenance** terms.
+> Feature = Design + Implementation
 
-**Implementation** is best described as writing the code, bringing the design in to the world of the living.
-
-**Maintenance** encapsulates both updating the business logic as the **Product** evolves, and addressing defects as they are found.
+Each of the above terms could be expanded further, but for now let's unpack the **Implementation** term - **Implementation** is best described as writing the code, bringing the design in to the world of the living.
 
 Lastly, let's assume the **Product** exists on a timeline, where any given point on the timeline can referred to as **T** (or **t**) where **Product(T)** is the cost of the **Product** at time **T**.
 
@@ -59,7 +57,7 @@ If we include sufficient **Testing** with each **Feature**, we can assume our **
 
 > \$Beta = Product(Now) = E(T=0, Now) {Infrastructure(T) + Feature(T) \* 2 + Defects(T) / 2 }
 
-If we assume addressing **Defects** is significantly cheaper than developing **Features** and writing tests, so _\$Beta_ would be significantly more expensive than _\$Alpha_.
+If we assume addressing **Defects** is significantly cheaper than developing **Features** and writing tests, _\$Beta_ would be significantly more expensive than _\$Alpha_.
 
 However, if we assume inadequate **Testing** is occurring, then we might reduce the **Feature** cost to the original in _\$Alpha_ and rely on our Customers and Support Tickets to determine when **Defects** were introduced to the system. We'll adjust _\$Alpha_ to reflect this and rename it as _\$Gamma_:
 
@@ -73,7 +71,7 @@ If we include the cost for context switching and debugging a misbehaving applica
 
 > \$Delta = Product(Now) = E(T=0, Now) {Infrastructure(T) + Feature(T) + Feature(T-1) / 2 + Defects(T) \* 2}
 
-Oh no!!! We're paying more than full price for a **Feature**! And we've got twice the **Defects**!!
+Oh no!!! We're paying more than full price for a **Feature**! And we've got twice the **Defects**!! It's still cheaper than _\$Beta_ though, right?
 
 > \$Delta = Product(Now) = E(T=0, Now) {Infrastructure(T) + Feature(T) \* 1.5 + Defects(T) \* 2}
 
@@ -83,7 +81,7 @@ Lastly, let's consider the situation where **Features** rely on upon more than t
 
 Now we're really in trouble, cost has entered in to realm of factorials.
 
-We could add more coefficients to account for the introduced **Defects** found while maintaining the previous **Features**, but I think the point has already been made, cost model _\$Beta_ is cheaper.
+We could add more coefficients to account for the introduced **Defects** found while maintaining the previous **Features**, but I think the point has already been made, cost model _\$Beta_ is cheaper in the long run.
 
 With cost model _\$Eta_, the technical debt will quickly overwhelm us and soon we won't be able to make the minimum payment and our **Feature** development will grind to a halt.
 
